@@ -38,3 +38,7 @@ atlassian-ide-plugin.xml
 .nb-gradle
 .java-version
 *.tlog
+*.war
+*.war.*
+*.bin
+*.jar

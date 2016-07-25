@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.CustomerProtos;
 import com.example.entity.MessageEntity;
 import com.example.repository.MessageRepository;
 
@@ -67,6 +68,8 @@ public class MessageService {
     @Transactional
     public boolean DeleteMessage(Integer idMessage) {
         messageRepository.delete(idMessage);
+        CustomerProtos.Organization f =  CustomerProtos.Organization.newBuilder().addCustomer(CustomerProtos.Customer.newBuilder().addEmail())
+
         return true;
     }
 }
