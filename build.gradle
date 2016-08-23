@@ -33,6 +33,7 @@ configurations {
 
 ext {
 	swaggerVersion ="2.5.0"
+	hikariCPVersion = "2.4.3"
 }
 
 dependencies {
@@ -41,6 +42,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-websocket')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile("org.springframework.security:spring-security-jwt")
+	compile ("org.springframework.security.oauth:spring-security-oauth2")
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile ("com.zaxxer:HikariCP:${hikariCPVersion}")
+
 	runtime('org.postgresql:postgresql')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
